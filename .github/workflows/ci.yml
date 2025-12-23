@@ -17,7 +17,7 @@ jobs:
     outputs:
       rust-version: ${{ steps.rust-version.outputs.rust-version }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8
       - name: Determine Rust Version
         id: rust-version
         run: |
@@ -31,8 +31,8 @@ jobs:
       matrix:
         rust-version: ['${{needs.pre-build.outputs.rust-version}}', stable, nightly]
     steps:
-    - uses: actions/checkout@v4
-    - uses: taiki-e/install-action@v2
+    - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8
+    - uses: taiki-e/install-action@50cee16bd6b97b2579572f83cfa1c0a721b1e336
       with:
         tool: just
     - name: Use Rust ${{matrix.rust-version}}
@@ -49,8 +49,8 @@ jobs:
     name: Docs
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
-    - uses: taiki-e/install-action@v2
+    - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8
+    - uses: taiki-e/install-action@50cee16bd6b97b2579572f83cfa1c0a721b1e336
       with:
         tool: just
     - run: rustup override set nightly
@@ -67,14 +67,14 @@ jobs:
     runs-on: ubuntu-latest
     name: Lint
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8
       - name: Check format
         run: cargo fmt -- --check
       - name: Run clippy
         run: cargo clippy --workspace --all-targets --all-features -- --deny warnings
-      - uses: EmbarkStudios/cargo-deny-action@v1
+      - uses: EmbarkStudios/cargo-deny-action@76cd80eb775d7bbbd2d80292136d74d39e1b4918
       - name: Check spelling
-        uses: crate-ci/typos@v1.24.4
+        uses: crate-ci/typos@1368a15067646c7e74e98c4f65658df1d034d484
   test:
     name: Test
     strategy:
@@ -82,15 +82,15 @@ jobs:
         os: [ubuntu-latest, macos-latest, windows-latest]
     runs-on: ${{ matrix.os }}
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8
     - name: Run tests
       run: cargo test --workspace --all-features
   test_package:
     name: Test Package
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
-    - uses: taiki-e/install-action@v2
+    - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8
+    - uses: taiki-e/install-action@50cee16bd6b97b2579572f83cfa1c0a721b1e336
       with:
         tool: just
     - run: just test-package xterm-color
