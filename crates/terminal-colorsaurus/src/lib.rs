@@ -12,7 +12,6 @@
 //! * Works on Windows (starting with Windows Terminal v1.22).
 //! * Safely restores the terminal from raw mode even if the library errors or panicks.
 //! * Does not send any escape sequences if `TERM=dumb`.
-//! * Works even if all of stderr, stdout and stdin are redirected.
 //! * Supports a timeout (for situations with high latency such as an SSH connection).
 //!
 //! ## Terminal Support

@@ -85,6 +85,11 @@ jobs:
     - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # @v6
     - name: Run tests
       run: cargo test --workspace --all-features
+    - uses: taiki-e/install-action@50cee16bd6b97b2579572f83cfa1c0a721b1e336 # @v2
+      with:
+        tool: nextest
+    - name: Run tests with nextest
+      run: cargo nextest run --workspace --all-features
   test_package:
     name: Test Package
     runs-on: ubuntu-latest

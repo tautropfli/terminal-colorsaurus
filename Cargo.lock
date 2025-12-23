@@ -285,7 +285,7 @@ dependencies = [
 
 [[package]]
 name = "terminal-colorsaurus"
-version = "1.0.1"
+version = "1.0.2"
 dependencies = [
  "anstyle",
  "cfg-if",
@@ -300,9 +300,9 @@ dependencies = [
 
 [[package]]
 name = "terminal-trx"
-version = "0.2.5"
+version = "0.2.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "662a3cd5ca570df622e848ef18b50c151e65c9835257465417242243b0bce783"
+checksum = "3b3f27d9a8a177e57545481faec87acb45c6e854ed1e5a3658ad186c106f38ed"
 dependencies = [
  "cfg-if",
  "libc",

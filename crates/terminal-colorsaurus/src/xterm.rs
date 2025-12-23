@@ -106,6 +106,13 @@ fn query<T>(
     }
 
     let mut tty = terminal()?;
+
+    // All standard I/O streams being redirected is a good
+    // hint to us that we should not query the terminal.
+    if !tty.has_connected_stdio_stream() {
+        return Err(Error::unsupported());
+    }
+
     let mut tty = tty.lock();
     let mut tty = tty.enable_raw_mode()?;
 
