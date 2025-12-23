@@ -1,4 +1,8 @@
 # Changelog
+## 1.0.2
+* Fixed querying blocking forever when called by `cargo-nextest`. #38 \
+  A new heuristic was added: If all standard I/O streams are redirected, do not query.
+
 ## 1.0.1
 * Updated `windows-sys` to 0.61.
 
