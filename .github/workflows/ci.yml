@@ -72,7 +72,7 @@ jobs:
         run: cargo fmt -- --check
       - name: Run clippy
         run: cargo clippy --workspace --all-targets --all-features -- --deny warnings
-      - uses: EmbarkStudios/cargo-deny-action@v1
+      - uses: EmbarkStudios/cargo-deny-action@76cd80eb775d7bbbd2d80292136d74d39e1b4918
       - name: Check spelling
         uses: crate-ci/typos@v1.24.4
   test:
