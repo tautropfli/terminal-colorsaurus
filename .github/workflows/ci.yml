@@ -54,7 +54,7 @@ jobs:
       with:
         tool: just
     - run: rustup override set nightly
-    - uses: dtolnay/install@cargo-docs-rs
+    - uses: dtolnay/install@982daea0f5d846abc3c83e01a6a1d73c040047c1 # @cargo-docs-rs
     - name: Build Docs
       run: just doc
       env:
