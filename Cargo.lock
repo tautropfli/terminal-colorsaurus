@@ -285,7 +285,7 @@ dependencies = [
 
 [[package]]
 name = "terminal-colorsaurus"
-version = "1.0.2"
+version = "1.0.3"
 dependencies = [
  "anstyle",
  "cfg-if",
@@ -576,4 +576,4 @@ checksum = "d6bbff5f0aada427a1e5a6da5f1f98158182f26556f345ac9e04d36d0ebed650"
 
 [[package]]
 name = "xterm-color"
-version = "1.0.1"
+version = "1.0.2"

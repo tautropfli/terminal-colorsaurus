@@ -2,7 +2,7 @@
 name = "terminal-colorsaurus"
 description = "A cross-platform library for determining the terminal's background and foreground color. It answers the question «Is this terminal dark or light?»."
 readme = "readme.md"
-repository = "https://github.com/bash/terminal-colorsaurus"
+repository = "https://github.com/tautropfli/terminal-colorsaurus"
 categories = ["command-line-interface"]
 keywords = ["terminal", "light", "dark", "color-scheme", "cli"]
 license = "MIT OR Apache-2.0"

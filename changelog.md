@@ -1,4 +1,7 @@
 # Changelog
+## 1.0.3
+* Updated crate metadata.
+
 ## 1.0.2
 * Fixed querying blocking forever when called by `cargo-nextest` [#38](https://github.com/tautropfli/terminal-colorsaurus/issues/38). \
   A new heuristic was added: If all standard I/O streams are redirected, do not query.
