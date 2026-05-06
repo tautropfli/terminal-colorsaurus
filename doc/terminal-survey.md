@@ -26,6 +26,7 @@ with `terminal-colorsaurus`:
 * Windows Terminal (>= v1.22)
 * xterm
 * [Zed](https://zed.dev)
+* Zellij
 
 ## Unsupported
 * linux
@@ -66,6 +67,7 @@ A list of terminals that were tested for support of `OSC 10` / `OSC 11` and `DA1
 | [zutty]                    | yes                   | yes   | `050bf2b`                          |
 | IntelliJ IDEA ([JediTerm]) | yes                   | yes   | PyCharm 2023.3.2 (macOS)           |
 | VSCode ([xterm.js])        | yes                   | yes   | 1.85.1 (macOS)                     |
+| [Zellij]                   | yes                   | yes   | 0.44.2                             |
 | Windows Terminal (conhost) | yes                   | yes   | [`b3f4162`][conhost-commit]        |
 | anyterm                    | no                    | *no*  | 1.2.3                              |
 | ConEmu / Cmder             | no                    | yes   | 230724 stable                      |
@@ -107,22 +109,22 @@ printf '\e]11;?\e\\' && cat -v # Tests for background color support. Example out
 [Console]: https://apps.gnome.org/en-GB/Console/
 [Contour]: https://contour-terminal.org/
 [cool-retro-term]: https://github.com/Swordfish90/cool-retro-term
-[Ghostty]: https://ghostty.org
 [Extraterm]: https://extraterm.org
 [foot]: https://codeberg.org/dnkl/foot
+[Ghostty]: https://ghostty.org
 [Hyper]: https://hyper.is/
 [iSH]: https://ish.app/
 [iTerm2]: https://iterm2.com/
 [JediTerm]: https://github.com/JetBrains/jediterm
 [kitty]: https://sw.kovidgoyal.net/kitty/
 [Konsole]: https://konsole.kde.org/
-[Lapce]: https://lapce.dev/
 [La Terminal]: https://la-terminal.net/
+[Lapce]: https://lapce.dev/
 [mintty]: https://mintty.github.io/
-[nvim-terminal]: http://neovim.io/doc/user/terminal.html
 [mlterm-commit]: https://github.com/arakiken/mlterm/commit/f3474e1eb6a97239b38869f0fba78ce3e6a8ad87
 [mlterm]: https://mlterm.sourceforge.net/
 [mosh]: https://mosh.org
+[nvim-terminal]: http://neovim.io/doc/user/terminal.html
 [pangoterm-rev]: https://bazaar.launchpad.net/~leonerd/pangoterm/trunk/revision/634
 [pangoterm]: http://www.leonerd.org.uk/code/pangoterm/
 [PuTTY]: https://www.chiark.greenend.org.uk/~sgtatham/putty/
@@ -134,11 +136,12 @@ printf '\e]11;?\e\\' && cat -v # Tests for background color support. Example out
 [Terminology]: http://www.enlightenment.org/
 [Termux]: https://termux.dev/en/
 [Therm]: https://github.com/trufae/Therm
-[wayst]: https://github.com/91861/wayst
 [wayst-commit]: https://github.com/91861/wayst/commit/51773da1817abb14f2b90635daf30aac0f1536b6
+[wayst]: https://github.com/91861/wayst
 [WezTerm]: https://wezfurlong.org/wezterm/
 [xterm.js]: https://xtermjs.org/
 [xterm]: https://invisible-island.net/xterm/
 [Yakuake]: https://apps.kde.org/en-gb/yakuake/
 [zed]: https://zed.dev/
+[Zellij]: https://zellij.dev/
 [zutty]: https://tomscii.sig7.se/zutty/
