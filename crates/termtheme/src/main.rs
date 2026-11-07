@@ -1,21 +1,12 @@
 use anstyle::{AnsiColor, Style};
 use clap::Parser;
-use std::{
-    fmt::{self, Display},
-    io::{self, stdout, IsTerminal},
-    process::exit,
-};
+use std::fmt::{self, Display};
+use std::io;
+use std::process::exit;
 use terminal_colorsaurus::{theme_mode, QueryOptions, ThemeMode};
 
 fn main() {
     let args = Args::parse();
-    if !stdout().is_terminal() && !args.force {
-        display_error("stdout is not connected to a terminal");
-        display_help(
-            "use '--force' if you're sure that no other process is trying to write to the terminal",
-        );
-        exit(1);
-    }
     match theme_mode(QueryOptions::default()) {
         Ok(s) => display_theme_mode(s, !args.no_newline),
         Err(e) => {
@@ -42,17 +33,6 @@ fn display_error(e: impl Display) {
     }
 }
 
-fn display_help(e: impl Display) {
-    if use_colors(&io::stderr()) {
-        let style = Style::new()
-            .bold()
-            .fg_color(Some(AnsiColor::BrightBlue.into()));
-        eprintln!("{style}tip:{style:#} {e}");
-    } else {
-        eprintln!("tip: {e}");
-    }
-}
-
 struct DisplayName(ThemeMode);
 
 impl fmt::Display for DisplayName {
@@ -70,9 +50,6 @@ struct Args {
     /// Do not output a newline.
     #[arg(short = 'n')]
     no_newline: bool,
-    /// Always query the terminal even when stdout is redirected.
-    #[arg(short = 'f', long)]
-    force: bool,
 }
 
 trait Stream: io::Write + io::IsTerminal {}
